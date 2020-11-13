@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default {
-  title: "UI Component/Icon",
+  title: "UI Components/Icon",
   component: Icon,
 };
 
