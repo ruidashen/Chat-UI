@@ -3,7 +3,7 @@ import React from "react";
 import NavBar, { MenuItem } from "./";
 import "styled-components/macro";
 export default {
-  title: "UI Components/NavBar",
+  title: "Page Components/NavBar",
   component: NavBar,
 };
 
