@@ -1,3 +1,4 @@
+import Emoji from "components/Emoji";
 import VoiceMessage from "components/VoiceMessage";
 import React from "react";
 import ChatBubble from "./";
@@ -17,7 +18,7 @@ export const FromOthers = () => {
 export const FromMe = () => {
   return (
     <ChatBubble type="mine" time="Yesterday 2:26pm">
-      A message sent from me.
+      A message sent from me.<Emoji label="smile">🙂</Emoji>
     </ChatBubble>
   );
 };
