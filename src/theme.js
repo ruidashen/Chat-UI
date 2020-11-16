@@ -3,6 +3,11 @@ export default {
   green: "#34D859",
   gray: "rgba(24,28,47,0.2)",
   red: "#F34848",
+  gray2: "rgba(241,237,237,0.3)",
+  gray3: "rgba(24,28,47,0.3)",
+  grayDark: "#181C2F",
+  darkPurple: "#292F4C",
+
   normal: "1.4rem",
   medium: "1.6rem",
   large: "1.8rem",
@@ -11,8 +16,8 @@ export default {
   small: "1.2rem",
   xsmall: "1rem",
   xxsmall: "0.8rem",
-  darkPurple: "#292F4C",
-  gray2: "rgba(241,237,237,0.3)",
-  gray3: "rgba(24,28,47,0.3)",
-  grayDark: "#181C2F",
+
+  background: "white",
+  inactiveColor: "rgba(41,47,76,0.3)",
+  inactiveColorDark: "white",
 };
