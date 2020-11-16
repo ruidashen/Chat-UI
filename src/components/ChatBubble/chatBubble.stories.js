@@ -1,3 +1,4 @@
+import VoiceMessage from "components/VoiceMessage";
 import React from "react";
 import ChatBubble from "./";
 
@@ -17,6 +18,22 @@ export const FromMe = () => {
   return (
     <ChatBubble type="mine" time="Yesterday 2:26pm">
       A message sent from me.
+    </ChatBubble>
+  );
+};
+
+export const VoiceMessageType = () => {
+  return (
+    <ChatBubble time="Yesterday 2:26pm">
+      <VoiceMessage time="01:24"></VoiceMessage>
+    </ChatBubble>
+  );
+};
+
+export const VoiceMessageTypeMine = () => {
+  return (
+    <ChatBubble type="mine" time="Yesterday 2:26pm">
+      <VoiceMessage type="mine" time="01:24"></VoiceMessage>
     </ChatBubble>
   );
 };
