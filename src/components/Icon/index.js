@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import StyledIcon from "./style";
+import SocialIcon from "./SoicalIcon";
 function Icon({
   icon: IconComponent,
   width = 24,
@@ -17,6 +18,8 @@ function Icon({
     </StyledIcon>
   );
 }
+
+Icon.Soical = SocialIcon;
 
 Icon.propTypes = {
   icon: PropTypes.element,
