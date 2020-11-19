@@ -15,3 +15,12 @@ export const Default = () => {
     </Select>
   );
 };
+
+export const FormSelect = () => {
+  return (
+    <Select type="form">
+      <Option>California</Option>
+      <Option>New York</Option>
+    </Select>
+  );
+};
