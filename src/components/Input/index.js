@@ -4,6 +4,7 @@ import StyledInput, { InputContainer, Prefix, Suffix } from "./style";
 import { ReactComponent as SearchIcon } from "assets/icons/search.svg";
 import Icon from "components/Icon";
 import { useTheme } from "styled-components";
+import InputText from "./InputText";
 
 function Input({ placeholder = "Please enter...", prefix, suffix, ...rest }) {
   return (
@@ -39,5 +40,6 @@ Input.propTypes = {
   suffix: PropTypes.any,
 };
 
+Input.Text = InputText;
 Input.Search = Search;
 export default Input;

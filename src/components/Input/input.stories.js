@@ -24,3 +24,8 @@ export const WithAffix = () => {
     ></Input>
   );
 };
+
+export const InputTextWithLabel = () => (
+  <Input.Text label="Nickname"></Input.Text>
+);
+export const InputTextWithoutLabel = () => <Input.Text></Input.Text>;
