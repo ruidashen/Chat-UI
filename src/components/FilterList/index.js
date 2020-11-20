@@ -12,7 +12,7 @@ import Icon from "components/Icon";
 function FilterList({
   children,
   options,
-  filterLabel = "sort list",
+  filterLabel = "Sory by",
   actionLabel,
   ...rest
 }) {
