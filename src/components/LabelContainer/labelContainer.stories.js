@@ -2,7 +2,7 @@ import React from "react";
 import LabelContainer from "./";
 
 export default {
-  title: "LabelContainer",
+  title: "UI Components/LabelContainer",
   component: LabelContainer,
 };
 
