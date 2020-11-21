@@ -7,6 +7,7 @@ const NoteImage = styled.img`
   grid-area: image;
   width: 60px;
   height: 60px;
+  object-fit: cover;
 `;
 
 const NoteTitle = styled(Heading).attrs({ level: 2 })`
