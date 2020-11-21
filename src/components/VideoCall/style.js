@@ -43,7 +43,7 @@ const VideoCallAlert = styled.div`
     "avatar info info"
     "avatar action icon";
   row-gap: 5px;
-  column-gap: 10px;
+  column-gap: 20px;
   align-items: center;
   width: max-content;
   position: absolute;
