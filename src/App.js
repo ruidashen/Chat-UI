@@ -1,6 +1,12 @@
-import "./App.css";
+import ChatApp from "components/ChatApp";
+import { ThemeProvider } from "styled-components";
+import theme from "./theme";
 function App() {
-  return <div></div>;
+  return (
+    <ThemeProvider theme={theme}>
+      <ChatApp></ChatApp>
+    </ThemeProvider>
+  );
 }
 
 export default App;
