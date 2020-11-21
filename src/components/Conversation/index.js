@@ -6,10 +6,13 @@ import ChatBubble from "components/ChatBubble";
 import VoiceMessage from "components/VoiceMessage";
 import Emoji from "components/Emoji";
 import Footer from "components/Footer";
-function Conversation({ children, ...rest }) {
+function Conversation({ onAvatarClick, onVideoClick, children, ...rest }) {
   return (
     <StyledConversation {...rest}>
-      <TitleBar></TitleBar>
+      <TitleBar
+        onAvatarClick={onAvatarClick}
+        onVideoClick={onVideoClick}
+      ></TitleBar>
       <Conversations>
         <ChatBubble time="Yesterday 2:26pm">Hi, How are you doing?</ChatBubble>
         <MyChatBubble time="Yesterday 4:30pm">I am coding!</MyChatBubble>

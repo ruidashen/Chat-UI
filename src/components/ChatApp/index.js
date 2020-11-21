@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import StyledChatApp, { Content, Drawer, Nav, Sidebar } from "./style";
 import NavBar from "components/NavBar";
@@ -10,7 +10,12 @@ import ContactList from "components/ContactList";
 import FileList from "components/FileList";
 import NoteList from "components/NoteList";
 import EditProfile from "components/EditProfile";
+import BlockedList from "components/BlockedList";
+import Settings from "components/Settings";
+import VideoCall from "components/VideoCall";
 function ChatApp({ children, ...rest }) {
+  const [showDrawer, setShowDrawer] = useState(false);
+  const [videoCalling, setVideoCalling] = useState(false);
   return (
     <StyledChatApp {...rest}>
       <Nav>
@@ -30,16 +35,32 @@ function ChatApp({ children, ...rest }) {
           <Route exact path="/notes">
             <NoteList></NoteList>
           </Route>
-          <Route exact path="/settings">
+          <Route path="/settings">
             <EditProfile></EditProfile>
           </Route>
         </Switch>
       </Sidebar>
       <Content>
-        <Conversation></Conversation>
+        {videoCalling && (
+          <VideoCall onHangUpClick={() => setVideoCalling(false)}></VideoCall>
+        )}
+        <Switch>
+          <Route path="/settings" exact>
+            <Settings></Settings>
+          </Route>
+          <Route path="/settings/blocked" exact>
+            <BlockedList></BlockedList>
+          </Route>
+          <Route path="/">
+            <Conversation
+              onAvatarClick={() => setShowDrawer(true)}
+              onVideoClick={() => setVideoCalling(true)}
+            ></Conversation>
+          </Route>
+        </Switch>
       </Content>
-      <Drawer>
-        <Profile></Profile>
+      <Drawer show={showDrawer}>
+        <Profile onCloseClick={() => setShowDrawer(false)}></Profile>
       </Drawer>
     </StyledChatApp>
   );
