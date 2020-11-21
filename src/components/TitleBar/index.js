@@ -9,6 +9,9 @@ import { ReactComponent as Camera } from "assets/icons/camera.svg";
 import { ReactComponent as Options } from "assets/icons/options.svg";
 import face from "assets/images/face-male-1.jpg";
 import Text from "components/Text";
+import Dropdown from "components/Dropdown";
+import { DropdownItem } from "components/Dropdown/style";
+import Seperator from "components/Seperator";
 function TitleBar({ children, ...rest }) {
   return (
     <StyledTitleBar {...rest}>
@@ -23,7 +26,24 @@ function TitleBar({ children, ...rest }) {
       <Actions>
         <Icon icon={Call} opacity={0.3}></Icon>
         <Icon icon={Camera} opacity={0.3}></Icon>
-        <Icon icon={Options} opacity={0.3}></Icon>
+        <Dropdown
+          content={
+            <>
+              <DropdownItem>
+                <Paragraph>Profile</Paragraph>
+              </DropdownItem>
+              <DropdownItem>
+                <Paragraph>Close Chat</Paragraph>
+              </DropdownItem>
+              <Seperator></Seperator>
+              <DropdownItem>
+                <Paragraph type="danger">Block Friend</Paragraph>
+              </DropdownItem>
+            </>
+          }
+        >
+          <Icon icon={Options} opacity={0.3}></Icon>
+        </Dropdown>
       </Actions>
     </StyledTitleBar>
   );
