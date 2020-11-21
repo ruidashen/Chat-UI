@@ -3,13 +3,18 @@ import PropTypes from "prop-types";
 import StyledFileList, { Files } from "./style";
 import FilterList from "components/FilterList";
 import FileCard from "components/FileCard";
+import useStaggeredList from "hooks/useStaggeredList";
+import { animated } from "react-spring";
 function FileList({ children, ...rest }) {
+  const trailAnimes = useStaggeredList(10);
   return (
     <StyledFileList {...rest}>
       <FilterList options={["Date Modified", "Name"]}>
         <Files>
           {new Array(10).fill(0).map((_, i) => (
-            <FileCard key={i}></FileCard>
+            <animated.div key={i} style={trailAnimes[i]}>
+              <FileCard></FileCard>
+            </animated.div>
           ))}
         </Files>
       </FilterList>
