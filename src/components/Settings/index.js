@@ -9,7 +9,9 @@ import Paragraph from "components/Paragraph";
 import Switch from "components/Switch";
 import Icon from "components/Icon";
 import Seperator from "components/Seperator";
+import { Link } from "react-router-dom";
 import { ReactComponent as ArrowMenuRight } from "assets/icons/arrowMenuRight.svg";
+import "styled-components/macro";
 function Settings({ children, ...rest }) {
   return (
     <StyledSettings {...rest}>
@@ -26,7 +28,15 @@ function Settings({ children, ...rest }) {
         <SettingsItem label="Voice and Video Call Notifications"></SettingsItem>
         <SettingsItem label="Show Preview Text"></SettingsItem>
         <SettingsItem label="Sound"></SettingsItem>
-        <SettingsItem label="See Block List" type="menu"></SettingsItem>
+        <Link
+          to="/settings/blocked"
+          css={`
+            text-decoration: none;
+            color: inherit;
+          `}
+        >
+          <SettingsItem label="See Block List" type="menu"></SettingsItem>
+        </Link>
       </SettingsGroup>
     </StyledSettings>
   );

@@ -14,8 +14,10 @@ import { ReactComponent as CloseCircle } from "assets/icons/closeCircle.svg";
 import Icon from "components/Icon";
 import Text from "components/Text";
 import face from "assets/images/face-male-1.jpg";
+import { useHistory } from "react-router-dom";
 
 function BlockedList({ children, ...rest }) {
+  const history = useHistory();
   return (
     <StyledBlockedList {...rest}>
       <SettingsMenu>
@@ -24,6 +26,7 @@ function BlockedList({ children, ...rest }) {
           css={`
             cursor: pointer;
           `}
+          onClick={() => history.goBack()}
         ></Icon>
         <Text size="xxlarge">Blocked Friends</Text>
       </SettingsMenu>
