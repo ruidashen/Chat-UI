@@ -3,11 +3,13 @@ export default {
   green: "#34D859",
   gray: "rgba(24,28,47,0.2)",
   red: "#F34848",
+  red2: "rgba(236,90,81,9.8)",
   gray2: "rgba(241,237,237,0.3)",
   gray3: "rgba(24,28,47,0.3)",
   gray4: "#EFECE8",
   gray5: "#D8D8D8",
   grayDark: "#181C2F",
+  grayDark2: "rgba(33,33,33,0.58)",
   darkPurple: "#292F4C",
 
   normal: "1.4rem",
