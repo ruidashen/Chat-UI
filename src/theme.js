@@ -11,6 +11,8 @@ export default {
   grayDark: "#181C2F",
   grayDark2: "rgba(33,33,33,0.58)",
   darkPurple: "#292F4C",
+  gradientGray:
+    "linear-gradient(119.19deg,#FFFFFF 0%, #F8F8F8 65.34%, #FFFFFF 100%)",
 
   normal: "1.4rem",
   medium: "1.6rem",
