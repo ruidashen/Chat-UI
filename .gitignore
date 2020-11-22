@@ -4,14 +4,16 @@
 /node_modules
 /.pnp
 .pnp.js
-/build
-/storybook-static
+
 # testing
 /coverage
 
 # production
 /build
+/storybook-static
 
+#logs
+build-storybook.log
 # misc
 .DS_Store
 .env.local
