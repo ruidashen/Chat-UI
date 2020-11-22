@@ -5,6 +5,9 @@ import "styled-components/macro";
 export default {
   title: "Page Components/NavBar",
   component: NavBar,
+  parameters: {
+    chromatic: { disable: true },
+  },
 };
 
 export const Menu = () => {

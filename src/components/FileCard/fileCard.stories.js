@@ -7,5 +7,15 @@ export default {
 };
 
 export const Default = () => {
-  return <FileCard></FileCard>;
+  return (
+    <FileCard
+      file={{
+        id: 1,
+        name: "Source Code.zip",
+        size: "1.5M",
+        type: "zip",
+        updatedAt: "2019/02/03/",
+      }}
+    ></FileCard>
+  );
 };

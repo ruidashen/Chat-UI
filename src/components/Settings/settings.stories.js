@@ -4,6 +4,9 @@ import Settings, { SettingsItem } from "./";
 export default {
   title: "Page Components/Settings",
   component: Settings,
+  parameters: {
+    chromatic: { disable: true },
+  },
 };
 
 export const Default = () => {
