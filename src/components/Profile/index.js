@@ -11,7 +11,7 @@ import StyledProfile, {
 } from "./style";
 import "styled-components/macro";
 import Avatar from "components/Avatar";
-import face from "assets/images/face-male-3.jpg";
+import face from "assets/images/face-female-2.jpg";
 import Paragraph from "components/Paragraph";
 import Emoji from "components/Emoji";
 import Icon from "components/Icon";
@@ -79,7 +79,7 @@ function Profile({
           margin-bottom: 12px;
         `}
       >
-        John Doe
+        Sonnie Camilleri
       </Paragraph>
       <Paragraph
         size="medium"

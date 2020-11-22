@@ -7,7 +7,7 @@ import Icon from "components/Icon";
 import { ReactComponent as Call } from "assets/icons/call.svg";
 import { ReactComponent as Camera } from "assets/icons/camera.svg";
 import { ReactComponent as Options } from "assets/icons/options.svg";
-import face from "assets/images/face-male-1.jpg";
+import face from "assets/images/face-female-2.jpg";
 import Text from "components/Text";
 import Dropdown from "components/Dropdown";
 import { DropdownItem } from "components/Dropdown/style";
@@ -22,12 +22,12 @@ function TitleBar({
 }) {
   return (
     <StyledTitleBar style={{ ...style, ...animeProps }} {...rest}>
-      <Avatar status="offline" src={face} onClick={onAvatarClick}></Avatar>
+      <Avatar status="online" src={face} onClick={onAvatarClick}></Avatar>
       <Title>
-        <Paragraph size="large">John Doe</Paragraph>
+        <Paragraph size="large">Sonnie Camilleri</Paragraph>
         <Paragraph type="secondary">
-          <Text>Offline</Text>
-          <Text>· Last read: 3 hours ago</Text>
+          <Text>Online</Text>
+          <Text>· Last read: 2 mins ago</Text>
         </Paragraph>
       </Title>
       <Actions>

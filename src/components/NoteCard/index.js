@@ -7,13 +7,13 @@ import StyledNoteCard, {
   NoteTitle,
 } from "./style";
 import note1 from "assets/images/note-1.jpg";
-function NoteCard({ children, ...rest }) {
+function NoteCard({ note, children, ...rest }) {
   return (
     <StyledNoteCard {...rest}>
-      <NoteImage src={note1}></NoteImage>
-      <NoteTitle>This is Note Title</NoteTitle>
-      <NoteExcerpt>This is Node Excerpt</NoteExcerpt>
-      <NotePublishTime>12/31/2020</NotePublishTime>
+      <NoteImage src={note.image}></NoteImage>
+      <NoteTitle>{note.title}</NoteTitle>
+      <NoteExcerpt>{note.excerpt}</NoteExcerpt>
+      <NotePublishTime>{note.time}</NotePublishTime>
     </StyledNoteCard>
   );
 }

@@ -1,0 +1,51 @@
+export default [
+  {
+    id: 1,
+    name: "Source Code.zip",
+    size: "1.5M",
+    type: "zip",
+    updatedAt: "2019/02/03/",
+  },
+  {
+    id: 2,
+    name: "2012-grades.xls",
+    size: "378k",
+    type: "excel",
+    updatedAt: "2018/03/04/",
+  },
+  {
+    id: 3,
+    name: "screenshot-2010-01-01.png",
+    size: "4.8M",
+    type: "image",
+    updatedAt: "2012/01/24/",
+  },
+  {
+    id: 4,
+    name: "JavaScript: The Definitive Guide",
+    size: "4.2M",
+    type: "pdf",
+    updatedAt: "Yesterday 18:30",
+  },
+  {
+    id: 5,
+    name: "ABC Tech Summit Draft.ppt",
+    size: "1.8M",
+    type: "ppt",
+    updatedAt: "Today 08:30",
+  },
+  {
+    id: 6,
+    name: "2018 thesis.docx",
+    size: "2.4M",
+    type: "word",
+    updatedAt: "2020/02/29/",
+  },
+  {
+    id: 7,
+    name: "central park.jpg",
+    size: "4.2M",
+    type: "image",
+    updatedAt: "2019/12/13/",
+  },
+];

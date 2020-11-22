@@ -44,6 +44,9 @@ function Conversation({ onAvatarClick, onVideoClick, children, ...rest }) {
         <MyChatBubble time="Yesterday 6:34pm">
           Let's play some games tomorrow.<Emoji label="smile">🙂</Emoji>
         </MyChatBubble>
+        <ChatBubble time="Yesterday 6:30pm">
+          In congue. Etiam justo. Etiam pretium iaculli qe?
+        </ChatBubble>
       </Conversations>
       <Footer animeProps={ftAnmieProps}></Footer>
     </StyledConversation>

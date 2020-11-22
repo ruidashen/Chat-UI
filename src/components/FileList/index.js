@@ -5,15 +5,16 @@ import FilterList from "components/FilterList";
 import FileCard from "components/FileCard";
 import useStaggeredList from "hooks/useStaggeredList";
 import { animated } from "react-spring";
+import fileData from "data/files";
 function FileList({ children, ...rest }) {
   const trailAnimes = useStaggeredList(10);
   return (
     <StyledFileList {...rest}>
       <FilterList options={["Date Modified", "Name"]}>
         <Files>
-          {new Array(10).fill(0).map((_, i) => (
-            <animated.div key={i} style={trailAnimes[i]}>
-              <FileCard></FileCard>
+          {fileData.map((file, i) => (
+            <animated.div key={file.id} style={trailAnimes[i]}>
+              <FileCard file={file}></FileCard>
             </animated.div>
           ))}
         </Files>

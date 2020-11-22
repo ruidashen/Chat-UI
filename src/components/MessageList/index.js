@@ -6,6 +6,7 @@ import StyledMessageList, { ChatList } from "./style";
 import FilterList from "components/FilterList";
 import { animated } from "react-spring";
 import useStaggeredList from "hooks/useStaggeredList";
+import messageData from "data/messages";
 function MessageList({ children, ...rest }) {
   const trailAnimes = useStaggeredList(6);
 
@@ -16,18 +17,18 @@ function MessageList({ children, ...rest }) {
         actionLabel="New Chat"
       >
         <ChatList>
-          {[1, 2, 3, 4, 5, 6].map((_, index) => (
-            <animated.div key={index} style={trailAnimes[index]}>
+          {messageData.map((message, index) => (
+            <animated.div key={message.id} style={trailAnimes[index]}>
               <MessageCard
                 active={index === 3}
-                replied={index % 3 === 0}
-                avatarSrc={face1}
-                name="John Doe"
-                avatarStatus="online"
-                statusText="Online"
-                time="3 hours ago"
-                message="This is a message"
-                unreadCount={2}
+                replied={message.replied}
+                avatarSrc={message.avatarSrc}
+                name={message.name}
+                avatarStatus={message.status}
+                statusText={message.statusText}
+                time={message.time}
+                message={message.message}
+                unreadCount={message.unreadCount}
               ></MessageCard>
             </animated.div>
           ))}
