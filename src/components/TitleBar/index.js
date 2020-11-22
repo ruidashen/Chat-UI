@@ -12,9 +12,16 @@ import Text from "components/Text";
 import Dropdown from "components/Dropdown";
 import { DropdownItem } from "components/Dropdown/style";
 import Seperator from "components/Seperator";
-function TitleBar({ onAvatarClick, onVideoClick, children, ...rest }) {
+function TitleBar({
+  animeProps,
+  style,
+  onAvatarClick,
+  onVideoClick,
+  children,
+  ...rest
+}) {
   return (
-    <StyledTitleBar {...rest}>
+    <StyledTitleBar style={{ ...style, ...animeProps }} {...rest}>
       <Avatar status="offline" src={face} onClick={onAvatarClick}></Avatar>
       <Title>
         <Paragraph size="large">John Doe</Paragraph>

@@ -12,12 +12,12 @@ import Button from "components/Button";
 import Emoji from "components/Emoji";
 import Popover from "components/Popover";
 import { useTheme } from "styled-components";
-function Footer({ children, ...rest }) {
+function Footer({ animeProps, style, children, ...rest }) {
   const [emojiIconActive, setEmojiIconActive] = useState(false);
   const theme = useTheme();
 
   return (
-    <StyledFooter {...rest}>
+    <StyledFooter style={{ ...animeProps, ...style }} {...rest}>
       <Input
         placeholder="Enter message"
         prefix={<Icon icon={ClipIcon}></Icon>}
