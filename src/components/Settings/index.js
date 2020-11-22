@@ -12,32 +12,44 @@ import Seperator from "components/Seperator";
 import { Link } from "react-router-dom";
 import { ReactComponent as ArrowMenuRight } from "assets/icons/arrowMenuRight.svg";
 import "styled-components/macro";
+import { animated, useSpring } from "react-spring";
 function Settings({ children, ...rest }) {
+  const animeProps = useSpring({
+    transform: "translate3d(0px,0px,0px)",
+    opacity: 1,
+    from: { transform: "translate3d(100px,0px,0px)", opacity: 0 },
+    config: {
+      tension: 140,
+    },
+    delay: 300,
+  });
   return (
     <StyledSettings {...rest}>
-      <SettingsGroup groupName="Privacy">
-        <SettingsItem label="Require Friend Request"></SettingsItem>
-        <SettingsItem
-          label="Find Mobile Contacts"
-          description="Enabling will recommend you mobile contacts who also use this app."
-        ></SettingsItem>
-        <SettingsItem label="Only Find me by mobile number"></SettingsItem>
-      </SettingsGroup>
-      <SettingsGroup groupName="Notifications">
-        <SettingsItem label="Message Notifications"></SettingsItem>
-        <SettingsItem label="Voice and Video Call Notifications"></SettingsItem>
-        <SettingsItem label="Show Preview Text"></SettingsItem>
-        <SettingsItem label="Sound"></SettingsItem>
-        <Link
-          to="/settings/blocked"
-          css={`
-            text-decoration: none;
-            color: inherit;
-          `}
-        >
-          <SettingsItem label="See Block List" type="menu"></SettingsItem>
-        </Link>
-      </SettingsGroup>
+      <animated.div style={animeProps}>
+        <SettingsGroup groupName="Privacy">
+          <SettingsItem label="Require Friend Request"></SettingsItem>
+          <SettingsItem
+            label="Find Mobile Contacts"
+            description="Enabling will recommend you mobile contacts who also use this app."
+          ></SettingsItem>
+          <SettingsItem label="Only Find me by mobile number"></SettingsItem>
+        </SettingsGroup>
+        <SettingsGroup groupName="Notifications">
+          <SettingsItem label="Message Notifications"></SettingsItem>
+          <SettingsItem label="Voice and Video Call Notifications"></SettingsItem>
+          <SettingsItem label="Show Preview Text"></SettingsItem>
+          <SettingsItem label="Sound"></SettingsItem>
+          <Link
+            to="/settings/blocked"
+            css={`
+              text-decoration: none;
+              color: inherit;
+            `}
+          >
+            <SettingsItem label="See Block List" type="menu"></SettingsItem>
+          </Link>
+        </SettingsGroup>
+      </animated.div>
     </StyledSettings>
   );
 }
